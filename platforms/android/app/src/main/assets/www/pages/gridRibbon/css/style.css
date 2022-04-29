@@ -1,0 +1,26 @@
+body {
+    background-color: #33658A; color: #1A2830;
+    font-family: 'Bungee', cursive;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;    
+}
+
+h1 {
+    margin: auto; margin-top: 100px;
+    display: grid; width: 300px;
+    grid-auto-rows: 60px;
+    font-size: 3em;
+}
+
+h1 > span {
+    background-color: #C60F0F;
+    line-height: 60px;
+    text-align: center;
+    transform: skewY(11deg);    
+}
+
+h1 > span:nth-child(2n) {
+    background-color: #FE4E00;
+    transform: skewY(-11deg);
+    z-index: 1;
+}

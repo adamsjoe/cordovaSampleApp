@@ -1,0 +1,63 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;  
+}
+
+.wrapper {
+  box-sizing: content-box;
+  height: 70px;
+  display: flex;
+}
+
+.words {
+  overflow: hidden;
+}
+
+span {
+  display: block;
+  height: 100%;
+  padding-left: 10px;
+  color: #be9fdd;
+  animation: spin_words 6s infinite;
+}
+
+@keyframes spin_words {
+  10% {
+    transform: translateY(-112%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-212%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-312%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-412%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}

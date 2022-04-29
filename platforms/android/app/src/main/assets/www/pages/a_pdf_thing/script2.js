@@ -12,7 +12,7 @@ var pdfDoc = null,
     pageNum = 1,
     pageRendering = false,
     pageNumPending = null,
-    scale = 0.8,
+    scale = 0.5,
     canvas = document.getElementById('the-canvas'),
     ctx = canvas.getContext('2d');
 
@@ -96,3 +96,18 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
   // Initial/first page rendering
   renderPage(pageNum);
 });
+
+var zoominbutton = document.getElementById("zoomIn");
+zoominbutton.onclick = function() {
+   scale = scale + 0.15;
+   renderPage(pageNum);
+}
+
+var zoomoutbutton = document.getElementById("zoomOut");
+zoomoutbutton.onclick = function() {
+   if (scale <= 0.25) {
+      return;
+   }
+   scale = scale - 0.15;
+   renderPage(pageNum);
+}
